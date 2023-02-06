@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="clockAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-Ph-fRL" userLabel="BackgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XvE-22-bec">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-In-z7l" userLabel="CurrentTimeView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH8-Ix-ow7" userLabel="CurrentTimeLabel">
+                                                <rect key="frame" x="180" y="0.0" width="33.333333333333343" height="200"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HH8-Ix-ow7" firstAttribute="centerX" secondItem="Xun-In-z7l" secondAttribute="centerX" id="9K8-ez-c0e"/>
+                                            <constraint firstAttribute="height" constant="200" id="FbO-g3-EUx"/>
+                                            <constraint firstItem="HH8-Ix-ow7" firstAttribute="centerY" secondItem="Xun-In-z7l" secondAttribute="centerY" id="H11-NP-5Vg"/>
+                                            <constraint firstAttribute="bottom" secondItem="HH8-Ix-ow7" secondAttribute="bottom" id="k2t-wc-e94"/>
+                                            <constraint firstItem="HH8-Ix-ow7" firstAttribute="top" secondItem="Xun-In-z7l" secondAttribute="top" id="y9x-4B-ayl"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="feK-rR-Csv">
+                                        <rect key="frame" x="0.0" y="200" width="393" height="559"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdq-b0-QtD">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="139.66666666666666"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZo-uG-2jf">
+                                                <rect key="frame" x="0.0" y="139.66666666666669" width="393" height="140"/>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZ0-3J-BRN">
+                                                <rect key="frame" x="0.0" y="279.66666666666663" width="393" height="139.66666666666663"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startTimer" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="jmd-Zb-pGo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct1-Pf-ADj">
+                                                <rect key="frame" x="0.0" y="419.33333333333337" width="393" height="139.66666666666663"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Stop Timer">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="stopButtonWith_sender:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="VLN-TV-9cS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="feK-rR-Csv" firstAttribute="leading" secondItem="XvE-22-bec" secondAttribute="leading" id="HnP-1B-q5Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="feK-rR-Csv" secondAttribute="trailing" id="Kol-vr-N0p"/>
+                                    <constraint firstItem="feK-rR-Csv" firstAttribute="top" secondItem="Xun-In-z7l" secondAttribute="bottom" id="ZxS-vG-5dY"/>
+                                    <constraint firstAttribute="bottom" secondItem="feK-rR-Csv" secondAttribute="bottom" id="aGg-fX-gJV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XvE-22-bec" secondAttribute="bottom" id="FJh-ye-ZRK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XvE-22-bec" secondAttribute="trailing" id="H77-ZE-ch9"/>
+                            <constraint firstItem="nR4-Ph-fRL" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="RTJ-mD-tW1"/>
+                            <constraint firstItem="nR4-Ph-fRL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WGi-7f-jO9"/>
+                            <constraint firstItem="XvE-22-bec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ivt-WC-7uV"/>
+                            <constraint firstItem="nR4-Ph-fRL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jdB-95-1SI"/>
+                            <constraint firstItem="nR4-Ph-fRL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="lSp-ei-ufh"/>
+                            <constraint firstItem="XvE-22-bec" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pgp-U5-Gpd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="nR4-Ph-fRL" id="lLO-q2-YAu"/>
+                        <outlet property="countDownTimeLabel" destination="Qdq-b0-QtD" id="6RN-PJ-rRM"/>
+                        <outlet property="currentTimeLabel" destination="HH8-Ix-ow7" id="PCF-k3-4f8"/>
+                        <outlet property="datePicker" destination="gZo-uG-2jf" id="Isj-F4-keI"/>
+                        <outlet property="startButton" destination="MZ0-3J-BRN" id="HmK-v0-jGJ"/>
+                        <outlet property="stopButton" destination="ct1-Pf-ADj" id="Qjb-Kj-1yR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="night" width="1000" height="1500"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
